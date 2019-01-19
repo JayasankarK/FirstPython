@@ -1,0 +1,24 @@
+{% extends 'master.html'%}
+
+{% block mybody%}
+<h1>My Faculties</h1>
+{% for faculty in facultyList %}
+<div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{faculty.name}}</div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">Department</div>
+            <div class="col-sm-6">{{faculty.dept}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">Mobile</div>
+            <div class="col-sm-6">{{faculty.mob}}</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">Email</div>
+            <div class="col-sm-6">{{faculty.email}}</div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
